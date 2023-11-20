@@ -1,6 +1,10 @@
 
 .ddd{
-  color: red;
-  font-size: 300px;
-  text-align: center;
+ display:flex;
+ justify-content: space-between;
+ flex-wrap: wrap;
+}
+
+.nav{
+  background-color: rgb(113, 182, 11);
 }

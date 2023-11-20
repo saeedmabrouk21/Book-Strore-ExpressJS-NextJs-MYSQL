@@ -44,9 +44,11 @@ CREATE TABLE IF NOT EXISTS Book
 (
 	barcode	  CHAR(10) PRIMARY KEY,
     bookname VARCHAR(50) NOT NULL,
-    dailyRentalRate FLOAT NOT NULL,
+    price FLOAT NOT NULL,
     numberInStock SMALLINT UNSIGNED NOT NULL ,
-    ratings float not null
+    ratings float,
+    coverLink VARCHAR(255) ,
+    people INTEGER
     
 );
 

@@ -24,12 +24,12 @@ loginRouter.post("/", (req, res) => {
     // Execute the SELECT query
     connection.query(
       `SELECT password FROM user WHERE userName = "${username}"`,
-      (selectErr, rows, ) => {
+      (selectErr, rows) => {
         if (selectErr) console.log("saeed");
 
         console.log("Barcodes:", rows);
         // Check if user exists
-        if (password === rows[0].password) {
+        if (rows[0] && password === rows[0].password) {
           return res.status(200).json({ success: "Login successful" });
         } else {
           return res.status(401).json({ error: "Invalid credentials" });

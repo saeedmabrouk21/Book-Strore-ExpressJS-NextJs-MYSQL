@@ -1,16 +1,41 @@
-"use client";
 import styles from "./page.module.css";
-import { useState } from "react";
-import LabelInput from "@/components/labelinput";
+import BookCard from "@/components/bookCard";
 import bookStoreLogo from "@/images/book_store_logo.jpg";
-import { useRouter } from "next/navigation";
 
 import Link from "next/link";
 
-export default function ClientHome() {
+export default  async function ClientHome() {
+  let books;
+
+    try {
+      const response = await fetch("http://localhost:3000/books", {
+        method: "get",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      books = await response.json();
+      console.log(books[0]);
+
+      // if (response.ok) {
+
+      // }
+    } catch (error) {
+      console.error("Error during login:", error);
+    }
+  
+
+
+
   return (
     <>
-      <div className={styles.ddd}>fck you</div>
+      <div className={styles["nav"]}>nav bar</div>
+      <div className={styles["ddd"]}>
+        {console.log("books", books)}
+        {books.map(element => 
+          <BookCard info={element}></BookCard>
+        )}
+      </div>
     </>
   );
 }

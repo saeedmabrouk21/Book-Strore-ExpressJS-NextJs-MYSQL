@@ -25,12 +25,12 @@ INSERT IGNORE INTO Category (category) VALUES
 ('Fantasy');
 
 -- Insert books
-INSERT IGNORE INTO Book (barcode, bookname, dailyRentalRate, numberInStock, ratings) VALUES
-('B001', 'The Great Gatsby', 1.99, 20, 4.5),
-('B002', 'To Kill a Mockingbird', 2.99, 15, 3.8),
-('B003', 'The Da Vinci Code', 1.49, 25, 4.2),
-('B004', 'Pride and Prejudice', 3.49, 18, 4.7),
-('B005', 'The Hobbit', 2.25, 30, 3.5);
+INSERT IGNORE INTO Book (barcode, bookname, price, numberInStock, ratings,coverLink) VALUES
+('B001', 'The Great Gatsby', 1.99, 20, 4.5,"https://designforwriters.com/wp-content/uploads/2017/10/design-for-writers-book-cover-tf-2-a-million-to-one.jpg",110),
+('B002', 'To Kill a Mockingbird', 2.99, 15, 3.8,"https://99designs-blog.imgix.net/blog/wp-content/uploads/2022/12/attachment_137125302-e1670235568295.jpeg?auto=format&q=60&fit=max&w=930",1210),
+('B003', 'The Da Vinci Code', 1.49, 25, 4.2,"https://bukovero.com/wp-content/uploads/2016/07/Harry_Potter_and_the_Cursed_Child_Special_Rehearsal_Edition_Book_Cover.jpg",1140),
+('B004', 'Pride and Prejudice', 3.49, 18, 4.7,"https://images.penguinrandomhouse.com/cover/9780593422182",310),
+('B005', 'The Hobbit', 2.25, 30, 3.5,"https://m.media-amazon.com/images/I/41gr3r3FSWL.jpg",112);
 
 -- Insert book-category associations
 INSERT IGNORE INTO BookCategory (barcode, category) VALUES
