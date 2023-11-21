@@ -1,12 +1,10 @@
-.ttt {
-  background-color: red;
-}
+
 .card-container {
   position: relative;
   /* background-color: rgb(0, 255, 85); */
 
-  width: 12rem;
-  height: 18rem;
+  width: 16rem;
+  height: 24rem;
   /* padding: 1rem; */
   border: 1px solid rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -30,6 +28,7 @@
 }
 .card-container p {
   text-align: center;
+  
 }
 .cart {
   position: absolute;
@@ -75,4 +74,43 @@
   left: 3%;
   /* background-color: red; */
   color: gold;
+}
+
+
+
+
+/* ******************************************************************** */
+/* ******************************************************************** */
+/* ******************************************************************** */
+/* ******************************************************************** */
+/* ******************************************************************** */
+
+.category-card-container {
+  position: relative;
+  /* background-color: rgb(0, 255, 85); */
+
+  width: 60rem;
+  height: 40rem;
+  /* padding: 1rem; */
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 2rem;
+  margin: 2rem auto;
+}
+.category-card-container img {
+  /* border: 2px solid red; */
+
+  width: 100%;
+  overflow: hidden;
+
+  height: 100%;
+
+  -webkit-box-shadow: 1px 2px 9px 0px #000000;
+  box-shadow: 1px 2px 9px 0px #000000;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.4s;
+}
+.category-card-container img:hover {
+  transform: scale(1.2);
+  opacity: 70%;
 }

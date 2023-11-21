@@ -1,7 +1,7 @@
 "use client";
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
-import bookStoreLogo from "../images/book_store_logo.jpg";
+import bookStoreLogo from "@/images/book_store_logo.jpg";
 import Link from "next/link";
 import { useState } from "react";
 

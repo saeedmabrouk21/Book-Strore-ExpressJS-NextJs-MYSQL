@@ -5,12 +5,14 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const bookRouter = require("./routes/books.js");
+const categoryRouter = require("./routes/categories.js");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/login", loginRouter);
 app.use("/register", registerRouter);
 app.use("/books", bookRouter);
+app.use("/categories", categoryRouter);
 app.use(cors());
 
 app.get("/", (req, res) => {});
