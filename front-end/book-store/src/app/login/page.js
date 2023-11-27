@@ -1,4 +1,6 @@
 "use client";
+import { createContext} from "react";
+
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
 import bookStoreLogo from "@/images/book_store_logo.jpg";
@@ -10,6 +12,7 @@ export default function LoginForm() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [wrongCredentials, setWrongCredentials] = useState(false); // Fix the typo here
+  const logicContext = createContext();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -23,6 +26,7 @@ export default function LoginForm() {
       });
 
       if (response.ok) {
+        setWrongCredentials(false);
         router.push("/clienthome");
       } else {
         setWrongCredentials(true);

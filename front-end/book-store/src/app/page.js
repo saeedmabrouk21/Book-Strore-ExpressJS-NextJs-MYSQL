@@ -1,9 +1,13 @@
-import LoginForm from "@/app/login/loginForm";
+import LoginForm from "@/app/login/page";
+import Category from "./category/page";
+import ClientHome from "./clienthome/page";
 
 export default function Home() {
   return (
     <main>
-      <LoginForm></LoginForm>
+      <ClientHome>
+        
+      </ClientHome>
     </main>
   );
 }

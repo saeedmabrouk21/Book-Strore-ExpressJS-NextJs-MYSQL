@@ -13,7 +13,6 @@ categoryRouter.get("/", (req, res) => {
     // Execute the SELECT query
     connection.query("CALL pr_categories()", (selectErr, rows) => {
       if (selectErr) console.log("saeed");
-      console.log(rows[0]);
       if (rows.length == 0) {
         return res.status(204).json({ error: "NO content" });
       } else {
