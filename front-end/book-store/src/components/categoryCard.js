@@ -13,7 +13,7 @@ export default function CategoryCard({
   return (
     <>
       <div className={styles["category-card-container"]}>
-        <img src={info.url} />
+        <img src={info.url} alt={info.category} />
       </div>
     </>
   );

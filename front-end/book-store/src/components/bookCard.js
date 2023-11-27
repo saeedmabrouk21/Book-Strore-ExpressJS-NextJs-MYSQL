@@ -15,10 +15,6 @@ const StyledRating = styled(Rating)({
   //   "& .MuiRating-sizeSmall": {},
 });
 export default function BookCard({
-
-
-
-  
   info = {
     name: "",
     link: "",
@@ -32,28 +28,27 @@ export default function BookCard({
       <div className={styles["card-container"]}>
         <img
           src={info.link}
+          alt={info.name}
           onMouseEnter={() => setSeeData(false)}
           onMouseLeave={() => setSeeData(true)}
         />
-        
-          <AddShoppingCartIcon className={styles["cart"]}></AddShoppingCartIcon>
-       
+
+        <AddShoppingCartIcon className={styles["cart"]}></AddShoppingCartIcon>
+
         {seeData && (
           <div className={styles["data"]}>
             <p>{info.name}</p>
 
             <span className={styles["price"]}>{info.price}$</span>
             <span className={styles["rating"]}>
-              
-            <StyledRating
-              name="read-only"
-              value={info.rate}
-              precision={0.1}
-              size="small"
-              readOnly
-              
-            />
-            <span className={styles["people"]} >(233)</span>
+              <StyledRating
+                name="read-only"
+                value={info.rate}
+                precision={0.1}
+                size="small"
+                readOnly
+              />
+              <span className={styles["people"]}>(233)</span>
             </span>
           </div>
         )}

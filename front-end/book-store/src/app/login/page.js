@@ -1,5 +1,5 @@
 "use client";
-import { createContext} from "react";
+import { createContext } from "react";
 
 import { useRouter } from "next/navigation";
 import styles from "./page.module.css";
@@ -45,7 +45,7 @@ export default function LoginForm() {
           action="http://localhost:3000/login"
           onSubmit={handleSubmit}
         >
-          <img src={bookStoreLogo.src} />
+          <img alt="book store logo" src={bookStoreLogo.src} />
 
           <label htmlFor="username">Username</label>
           <input
@@ -68,7 +68,7 @@ export default function LoginForm() {
           <input type="submit" required></input>
           <hr />
           <span>
-            Don't have an account? <Link href="register">register</Link>
+            Don&#39;t have an account? <Link href="register">register</Link>
           </span>
           {wrongCredentials && <div>Wrong Credentials</div>}
         </form>

@@ -46,7 +46,7 @@ export default function Register() {
     <>
       <div className={styles.container}>
         <form className={styles["login-form"]} onSubmit={handleSubmit}>
-          <img src={bookStoreLogo.src} />
+          <img alt="bookstorelogo" src={bookStoreLogo.src} />
 
           <label htmlFor="username">Username</label>
           <input
